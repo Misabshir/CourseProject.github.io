@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="CourseProjectTheme.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="themes/CourseProjectTheme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+
+function slider() {
+	$(".slider#1").show("fade",500);
+	$(".slider#1").delay(5500).hide("slide",{direction:"left"},500);
+
+	var sc=$(".slider img").size();
+	var count=2;
+
+	setInterval(function()){
+		$(".slider#"+count).show("slide",{direction:"right"},500);
+		$(".slider#"+count).delay(5500).hide("slide",{direction:"left"},500);
+
+		if(count==sc){
+			count=1;
+		}else {
+			count=count+1;
+		}
+	},6500);
+
+}
+
+</script>
+</head>
+<body onload="slider();">
+
+<div id="page" data-role="page" data-theme="b" data-add-back-btn="true">
+	<div data-role="header" data-theme="c">
+	  <div class="logo"><img src="https://s-media-cache-ak0.pinimg.com/564x/e4/0f/fb/e40ffb927c4d9d3c20dcdef80d41b4ea.jpg" width="200" height="150" alt=""/></div>
+	</div>
+
+  <div data-role="header">
+    <h1>Magnolia Henna Artistry</h1>
+		<p>Magnolia Henna Studio Artistry offers
+		different henna designs inspired by Sudanese, India, Khaleej and Somali cultures.<br> Our goal is to deliver optimum creativity to any event. We’ll ignite your passion for henna and make your event<br> an everlasting of great memory. Book your henna for your next event with us and<br> we will make your event a memorable one!.
+	</p>
+		<a href="#myPanel" class="ui-btn ui-btn-inline">View store locations</a>
+  </div>
+	<div data-role="panel" id="myPanel" data-theme="b">
+	<div data-role="collapsible-set">
+	<div data-role="collapsible">
+		<h3>Main Store</h3>
+		<p>12354 2nd Ave S<br>St. Cloud,MN 56303</p>
+	</div>
+</div>
+<div data-role="collapsible">
+	<h3>Minneapolis Location</h3>
+	<p>25637 Blaisdell St<br>Minneapolis, MN 545408</p>
+</div>
+	<p>You can close this panel by clicking outside of it, pressing the Esc key, or by swiping.</p>
+	</div>
+
+	<div data-role="content">
+		<ul data-role="listview" data-theme="b">
+			<li><a href="#Artist">Artists</a></li>
+      <li><a href="#design">Design Collection</a></li>
+			<li><a href="#appointment">Appointment Form</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-theme="b">
+    <h4><a href="#">Magnoliastudioartistry@gmail.com</a><br>
+      <a href="#">Tel: 612.707.2182</a><br><a href="#">Facebook</a><br> <a href="#">Tweeter<br></a>  <a href="#">Instagram</a><br> <a href="#">snapchat</a><br>
+  &copy; Magnolia Henna Artistry 2017</h4>
+	</div>
+</div>
+<div id="Artist" data-role="page" data-theme="b" data-add-back-btn="true">
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Artists</h1>
+	</div>
+	<div data-role="content">
+	  <h3></h3>
+		</div>
+		<p> Magnolia Henna Artistry we have the finest henna artists who have kin sight for henna.<br> Our artist are diversed group od women who came different parts of the world.<br> Please read our artists biography to find out more about them.</p>
+		<div data-role="content">
+			<ul data-role="listview" data-theme="b" data-filter="true">
+				<li><a href="#">Aisha</a></li>
+	      <li><a href="#">Daisy</a></li>
+				<li><a href="#">Jasmin</a></li>
+				<li><a href="#">Leila</a></li>
+			</ul>
+		</div>
+	<div data-role="footer" data-theme="b" >
+    <h4><a href="#">Magnoliastudioartistry@gmail.com</a><br>
+      <a href="#">Tel: 612.707.2182</a><br><a href="#">Facebook</a><br> <a href="#">Tweeter<br></a>  <a href="#">Instagram</a><br> <a href="#">snapchat</a><br>
+  &copy; Magnolia Henna Artistry 2017</h4>
+	</div>
+</div>
+<div id="design" data-role="page" data-theme="b" data-add-back-btn="true">
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Henna Designs</h1>
+	</div>
+	<fieldset class="ui-grid-b">
+		<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Sudanese Henna</div></div>
+		<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Khaleeji Henna</div></div>
+		<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Mahendi</div></div>
+	</fieldset>
+	<div class="slider">
+	     <image id="1" src="https://s-media-cache-ak0.pinimg.com/564x/82/53/d7/8253d736ec452d10a3da488231fb0d2f.jpg" alt="henna design">
+       <image id="2" src="https://s-media-cache-ak0.pinimg.com/564x/51/61/23/516123c2c844546b33d04471cb6c4613.jpg" alt="henna design">
+       <image id="3" src="https://s-media-cache-ak0.pinimg.com/564x/7d/22/5e/7d225edf232db0ec4b8c944ebd6bd205.jpg" alt="henna design">
+       <image id="4" src="https://s-media-cache-ak0.pinimg.com/564x/35/8b/30/358b304edf603b115492b3fbb682e674.jpg" alt="henna design">
+       <image id="5" src="https://s-media-cache-ak0.pinimg.com/564x/0c/22/b2/0c22b2f2a081d49d6644bd7eaad3efeb.jpg" alt="henna design">
+       </div>
+
+	<div data-role="footer" data-theme="b">
+    <h4><a href="#">Magnoliastudioartistry@gmail.com</a><br>
+      <a href="#">Tel: 612.707.2182</a><br><a href="#">Facebook</a><br> <a href="#">Tweeter<br></a>  <a href="#">Instagram</a><br> <a href="#">snapchat</a><br>
+  &copy; Magnolia Henna Artistry 2017</h4>
+	</div>
+</div>
+
+<div id="appointment" data-role="page" data-theme="b" data-add-back-btn="true">
+<div data-role="header" data-theme="b" data-add-back-btn="true">
+	<h1>Appointment</h1>
+</div>
+  <fieldset data-role="controlgroup"data-theme="a">
+    <legend>Select an Artist:</legend>
+    <input name="checkbox-1a" id="checkbox-1a" type="checkbox">
+    <label for="checkbox-1a">Aisha</label>
+    <input name="checkbox-2a" id="checkbox-2a" type="checkbox">
+    <label for="checkbox-2a">Daisy</label>
+    <input name="checkbox-3a" id="checkbox-3a" type="checkbox">
+    <label for="checkbox-3a">Jasmin</label>
+    <input name="checkbox-4a" id="checkbox-4a" type="checkbox">
+    <label for="checkbox-4a">Leila</label>
+  	</fieldset>
+		<label for="fname">Enter your first name:</label>
+  	<input name="fname" id="fname" value="" value="" type="text" data-theme="a">
+  	<label for="lname">Enter your last name:</label>
+  	<input name="lname" id="lname" value="" type="text" data-theme="a">
+  	<label for="tel">Enter your Phone number:</label>
+  	<input name="tel" id="tel" value="" type="tel" data-theme="a">
+  	<label for="email">Enter your email address:</label>
+  	<input name="email" id="email" value="" type="email" data-theme="a">
+  	<label for="date">Enter appointment date:</label>
+  	<input name="date" id="date" value="" type="date" data-theme="a">
+  	<input type="reset" value="Reset Button">
+  	<input type="submit" value="Submit">
+
+		<div data-role="footer" data-theme="b" >
+    <h4><a href="#">Magnoliastudioartistry@gmail.com</a><br>
+      <a href="#">Tel: 612.707.2182</a><br><a href="#">Facebook</a><br> <a href="#">Tweeter<br></a>  <a href="#">Instagram</a><br> <a href="#">snapchat</a><br>
+  &copy; Magnolia Henna Artistry 2017</h4>
+	</div>
+</div>
+
+<script>
+(function() {
+var rasm = document.querySelector('.localstorage');
+
+function supportsLocalStorage() {
+return typeof(Storage)!== 'undefined';
+
+}
+
+if (!supportsLocalStorage()) {
+rasm.value = 'Your browser does not support localStorage.';
+
+} else {
+try {
+
+setInterval(function() {
+localStorage.setItem('autosave', rasm.value);
+}, 1000);
+
+} catch (e) {
+
+if (e == QUOTA_EXCEEDED_ERR) {
+alert('Quota exceeded!');
+}
+
+}
+
+if (localStorage.getItem('autosave')) {
+rasm.value = localStorage.getItem('autosave');
+}
+
+document.querySelector('.clear').onclick = function() {
+rasm.value = '';
+
+localStorage.removeItem('autosave');
+};
+
+document.querySelector('.empty').onclick = function() {
+rasm.value = '';
+localStorage.clear();
+};
+
+}
+})();
+
+</script>
+</body>
+</html>
